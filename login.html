@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./loginStyle.css">
+</head>
+<body>
+    <div id="loginContainer">
+        <div id="logoBar">
+            <img src="./images/odin-lined.png" alt="logo" id="logo">
+            <h1>Welcome to the login page!</h1>
+        </div>
+
+        <div id="formContainer">
+            <form action="">
+                <fieldset>
+                    <legend>Let's get started!</legend>
+                    <div id="formElements">
+                        <div class="elementRow">
+                            <label for="fName">First name *</label>
+                            <input type="text" name="fName" id="fName" required placeholder="John" pattern="[A-za-z]">
+                            <label for="lName">Last name *</label>
+                            <input type="text" name="lName" id="lName" required placeholder="Doe" pattern="[A-za-z]">
+                        </div>
+                       <div class="elementRow">
+                            <label for="mail">Email *</label>
+                            <input type="email" name="mail" id="mail" required placeholder="abc@xyz.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"> 
+                            <label for="phone">Phone number</label>
+                            <input type="tel" name="phone" id="phone" required placeholder="+xx xxxxx xxxxx">
+                       </div>
+                       <div class="elementRow">
+                            <label for="pass">Password *</label>
+                            <input type="password" name="pass" id="pass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+                            <label for="confirmPass">Confirm password *</label>
+                            <input type="password" name="confirmPass" id="confirmPass" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+                        </div>
+                        <div class="elementRow">
+                            <button type="submit">Create account</button>
+                        </div>
+                        <div class="elementRow">
+                            <p>Already have an account? <a href="Login">Login</a></p>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
