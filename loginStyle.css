@@ -16,8 +16,8 @@ body {
     background-image: url(./images/anirudh-Xu4Pz7GI9JY-unsplash.jpg);
     background-color: black;
     background-size: cover;
-    width: 75vw;
-    height: 75vh;
+    width: clamp(500px, 50vw, 1000px);
+    height: 700px;
     position: relative;    
 }
 
@@ -39,15 +39,20 @@ body {
     margin-right: 24px;
 }
 
-h1 {
-
-}
+@font-face {
+    font-family: headline-font;
+    src: url(./font/Norse-Bold.otf);
+  }
+  
+  h1 {
+    font-family: headline-font, sans-serif;
+  }
 
 #formContainer {
     position: relative;
     left: 12.5%;
-    top: 7rem;
-    width: 75%;
+    top: 4.5rem;
+    width: clamp(350px,75%, 700px);
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 1rem;
@@ -67,17 +72,30 @@ legend {
     text-align: left;
 }
 
-formElements {
-   
+#formElements {
+
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.leftColumn, .rightColumn {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .elementRow {
-    margin-top: 2rem;
+    margin-top: 2rem;   
 }
 
 label {
     min-width: 5rem;
-    text-align: right;
+    text-align: left;
 }
 button {
     font-size: 1.25rem;
@@ -85,7 +103,7 @@ button {
     background-color: blue;
     border: none;
     padding: 0.5rem;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 input {
@@ -94,11 +112,41 @@ input {
     box-sizing: border-box;
 }
 
+input:required {
+    border-color: #000;
+}
+
+input:optional {
+    border-color: gray;
+}
+
 input:focus {
-    border: 1px solid #000;
-    background-color: rgb(233, 228, 228);
+    border: 1px solid blue;
+    background-color: rgb(247, 237, 250);
 }
 
 input:hover {
-    border: 2px solid #000;
+    border: 2.5px solid blue;
 }
+
+input:focus:valid {
+    background: url(./assets/valid.svg) no-repeat 95% 50% lightgreen;
+    background-size: 20px;
+}
+
+input:focus:invalid {
+    background: url(./assets/invalid.svg) no-repeat 95% 50% lightsalmon;
+    background-size: 20px;
+}
+
+
+#photoCredit {
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+a {
+    color: blue;
+}
+
